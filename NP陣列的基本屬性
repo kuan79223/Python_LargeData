@@ -1,0 +1,53 @@
+ndarray.ndim - 維度的數量。
+ndarray.shape - 顯示出陣列在每個維度上的整數值。
+ndarray.size - 陣列內元素的總數。
+ndarray.dtype - 來描述陣列中元素類型的對象。
+
+import numpy as np
+
+# list與 ndarray差異
+l = [[1,2,3],
+     [2,3,4]]
+print(l)
+a = np.array(l)
+print(a)
+
+print(a.ndim)  【ndim屬性查詢維度】(dimension)
+
+               【每個陣列都有shape,使用tuple來表示每個維度的大小】
+print(a.shape) 【陣列在每個維度上的整數值 [out]: (2,3) 2個維度3個整數】
+
+print(a.size)  【元素總數量】
+
+               【使用dtype屬性來顯示目前陣列內的資料型態(相同型態)】
+print(a.dtype) 【ndarray的資料型別
+
+
+#產生亂數陣列
+data = np.random.randn(2,3)
+【隨機得到一個數字，可能是負的或正的，可能大於一或小於一】
+print(data)
+
+print(data * 10)
+data += data
+print(data)
+
+
+【使用ones(),zeros(),empty(),arange()function建立ndarray】
+
+a = np.zeros(10)    [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+print(a)
+b = np.zeros((3,6))
+print(b)            [[0. 0. 0. 0. 0. 0.]
+                     [0. 0. 0. 0. 0. 0.]
+                     [0. 0. 0. 0. 0. 0.]]
+
+c = np.empty((2,3,2))  #value all is garbage
+print(c)
+
+【使用arange()function建立,類似於python range()】
+array = np.arange(15)
+print(array)
+《np.arange and list 不同語法 ,相同結果》
+list = list(range(15))
+print(list)
