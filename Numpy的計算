@@ -1,21 +1,4 @@
-import random as r
 
-#建立50位學生的中文和英文的分數
-chinese = [r.randint(60,100)for _ in range(50)]
-english = [r.randint(60,100)for _ in range(50)]
 
-print('chinese',chinese)
-print('english',english)
-
-#中文和英文的總合
-result = []
-for i in range(50):
-    total = chinese[i] + english[i]
-    result.append(total)
-print(result)
-
-#使用comprehension來建立中文和英文的總合
-result = [chinese[i] + english[i] for i in range(50)]
-print(result)
 
 
