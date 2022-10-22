@@ -36,3 +36,25 @@ b = np.array([2,4,6,8,10],dtype = int)
 c = a + b       #Numpy 提供更有效率的計算與多維運算工具。
 print(c)
 print(type(a),type(b))
+
+
+import random as r
+
+#建立50位學生的中文和英文的分數
+chinese = [r.randint(60,100)for _ in range(50)]
+english = [r.randint(60,100)for _ in range(50)]
+
+print('chinese',chinese)
+print('english',english)
+
+#中文和英文的總合
+result = []
+for i in range(50):
+    total = chinese[i] + english[i]
+    result.append(total)
+print(result)
+
+#使用comprehension來建立中文和英文的總合
+result = [chinese[i] + english[i] for i in range(50)]
+print(result)
+
