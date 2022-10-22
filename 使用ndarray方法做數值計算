@@ -39,3 +39,20 @@ f = np.multiply(a,b)    #(a*b)
 print(f)
 e =np.divide(a,b)       #(a/b)
 print(e)
+
+
+
+
+************************************
+import numpy as np
+a =np.array([4,5,6])
+print(np.power(a,2))
+
+c = np.array([1,2,3])
+print(a**c)
+
+b = np.array([0.25,0.5,0.125])
+             #1/4 ,1/2,1/8
+print(np.reciprocal(b))  #倒數
+
+print(np.remainder(a,c))  #餘數
