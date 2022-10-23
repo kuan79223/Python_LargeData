@@ -33,6 +33,8 @@ print(a)        # [ 0  1  2  3  4  12  12  12  8  9]
 arr_slice = a[5:8]  #宣告變數 複製 a 陣列片段
 #此時arr_slice為新的陣列 ,陣列值為 [12,12,12]
 print(arr_slice)
+
+
 arr_slice[1] = 12345   #index 0,1,2 將arr_slice的index 1設為 12345
 print(arr_slice)
 
@@ -42,3 +44,26 @@ print(arr_slice)
 #明確指定複製陣列
 copy_arr = a[1:4].copy()
 print(copy_arr)
+
+
+
+************NP array座標解析**************
+import numpy as np
+
+list1 = np.arange(9)      #尚未變形前,為直接座標
+print(list1)
+relist = np.reshape(list1,(3,3)) #reshape後,以索引值來代表
+print(relist)                   #[[0 1 2]
+                                # [3 4 5]
+                                # [6 7 8]]
+
+print(relist[2])                # [6 7 8]
+print(relist[2,:])              # [6 7 8]
+print(relist[2:,:])             # [[6 7 8]]
+
+print(relist[:,:2])             #[[0 1]
+                                # [3 4]
+                                # [6 7]]
+
+print(relist[1,:2])             #[3 4]
+print(relist[1:2,:2])           #[[3 4]]
