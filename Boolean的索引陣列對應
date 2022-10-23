@@ -1,0 +1,21 @@
+
+import numpy as np
+names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
+data = np.random.randn(7,2)
+print(data)
+print(names == 'Bob')  #輸出Boolean
+#將Boolean為 True的索引位置對照data索引位置輸出
+print(data[names == 'Bob'])
+print(data[names == 'Bob', 1:])
+print(data[names == 'Bob',1])
+#print(names != 'Bob')  #輸出Boolean
+mask = (names == 'Bob') | (names == 'Will')
+print(mask)            #輸出Boolean
+print(data[mask])
+
+data[data < 0] = 0  #小於0的陣列值換成0
+print(data)
+
+#以判斷式的結果來改變陣列值
+data[names != 'Joe'] = 7
+print(data)
