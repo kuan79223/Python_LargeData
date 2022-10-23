@@ -1,0 +1,33 @@
+https://zh.m.wikipedia.org/zh-tw/%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0
+指數函數:
+現今指數函數通常特指以 e 為底數的指數函數 e^x , e^x為數學中重要的函數，也可寫作exp(x)。
+這裡的 e 是數學常數，也就是自然對數函數的底數，
+近似值為2.718281828}，又稱為歐拉數。
+
+e^80 = 5.54062238
+
+a = np.arange(80,99)
+print(np.sqrt(a))
+
+print(np.exp(a))    # e^a
+
+*************************
+x = np.random.randn(8)
+y = np.random.randn(8)
+
+print(x)
+print(y)
+#對比x,y的每個陣列元素最大值
+print(np.maximum(x,y))
+
+rand = np.random.randn(7) * 5
+print(rand)
+#餘數(小數點),整數
+remainder , integer = np.modf(rand)
+print(remainder)
+print(integer)
+
+****************陣列的判斷式*********************
+
+
+
