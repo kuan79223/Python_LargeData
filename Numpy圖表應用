@@ -73,3 +73,18 @@ fig = plt.figure(figsize=(8,5))
 ax1 = fig.add_subplot(1,1,1)
 ax1.bar(index,values)
 plt.show()
+
+
+
+***********************************
+#標註數值
+index = np.arange(5)
+values = np.array([5, 7, 3, 4, 6]) * 1000
+fig = plt.figure(figsize=(8,5))
+ax1 = fig.add_subplot(1,1,1)
+ax1.bar(index,values)
+plt.xticks(index,['apple', 'banana', 'orange', 'tomato', 'guava'])
+plt.axis([-1,5,0,8000])
+for i in index:
+    plt.text(i-0.2,values[i]+200,values[i])
+plt.show()
