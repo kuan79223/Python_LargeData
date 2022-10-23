@@ -34,3 +34,16 @@ plt.ylabel('title y')
 plt.title('top title')
 plt.show()
 
+#練習一
+t = np.arange(0,5,0.1)
+y1 = np.sin(2 * np.pi * t)
+y2 = np.cos(2 * np.pi * t)
+
+fig = plt.figure(figsize=(8,15))
+ax1 = fig.add_subplot(2,1,1)
+ax1.plot(t,y1,'b-.')
+
+ax2 = fig.add_subplot(2,1,2)
+ax2.plot(t,y2,'r--')
+
+plt.show()
