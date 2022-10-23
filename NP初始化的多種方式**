@@ -146,3 +146,39 @@ x = np.full((3,3),6)   #全部規劃/填滿為某數
 print(x)
 
 
+
+**************************************
+import numpy as np
+
+  ●(起始值,終止值,切成幾筆) *包括最後一筆
+  ●linspace(a,b,c) - 包含 b 由 a 開始 切割成 c 個資料
+  x = np.linspace(25,30,5)
+  print(x)
+
+  ●linspace(a,b,c,endpoint=False) - 不包含 b 由 a 開始 切割成 c
+  x = np.linspace(25,30,5,endpoint = False)
+  print(x)
+
+  ●arange(a,b,c) - 不包含 b 由 a 開始 以固定間隔 c 來取值
+  x = np.arange(25,30,.5)
+  print(x)
+
+
+  a = np.array([6,7,8,9])
+  print(a)
+  b = np.arange(4)
+  print(b)
+
+  print(a-b)
+  print(b**2)
+  f = np.array([5,-1,3,9,0])
+  print([f<=3])    【陣列值判斷式】
+  f[f<=3] = 1      【利用判斷式來改變陣列值】
+  print(f)
+
+  ＃.T  【列欄對調的方法】
+  a = np.arange(15).reshape((3,5)) ●塑形
+  print(a)
+  a = np.arange(15).reshape((3,5),order ='F') ●改變陣列值走的方向
+  print(a)
+  print(a.T)  ●改變陣列形狀
