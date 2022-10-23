@@ -19,3 +19,26 @@
     
 
 
+***********基本索引和分割**************
+import numpy as np
+
+a = np.arange(10)
+print(a[5])     #直接座標
+print(a[:5])    # [0 1 2 3 4]
+print(a[5:8])   # [5 6 7]
+a[5:8]=12       # 指定 a 陣列範圍的值為: 12
+print(a)        # [ 0  1  2  3  4  12  12  12  8  9]
+
+
+arr_slice = a[5:8]  #宣告變數 複製 a 陣列片段
+#此時arr_slice為新的陣列 ,陣列值為 [12,12,12]
+print(arr_slice)
+arr_slice[1] = 12345   #index 0,1,2 將arr_slice的index 1設為 12345
+print(arr_slice)
+
+arr_slice[:] = 64   #將arr_slice全部的設為64
+print(arr_slice)
+
+#明確指定複製陣列
+copy_arr = a[1:4].copy()
+print(copy_arr)
