@@ -23,3 +23,14 @@ y1 = 2 * x + 1
 print(y1)
 y2 = x ** 2
 print(y2)
+
+#圖表設置
+fig = plt.figure(figsize=(8,5))
+ax1 = fig.add_subplot(1,1,1)
+ax1.plot(x,y1,'r--')
+ax1.plot(x,y2,color='red',linestyle='-',linewidth=1)
+plt.xlabel('title x')
+plt.ylabel('title y')
+plt.title('top title')
+plt.show()
+
