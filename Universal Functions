@@ -54,3 +54,32 @@ print(np.where(arr>2,2,-2))
 print(np.where(arr>0,2,arr))
 
 
+
+************統計方法*************
+        總和,最大與最小
+        中位數與平均
+        總和,最大與最小
+  np.sum( ) 代表某一個陣列內容的總和，也可以指定這個陣列的哪一軸 (axis) 內容總和。
+  np.min( ) 代表某一個陣列內容的最小值，也可以指定這個陣列的哪一軸 (axis) 內容的最小值。
+  np.max( ) 代表某一個陣列內容的最大值，也可以指定這個陣列的哪一軸 (axis) 內容的最大值。
+  amin 與 min 是相同功能的方法。
+  amax 與 max 是相同功能的方法。
+  
+
+
+*****************************************  
+import numpy as np
+#10個同學,每個同學5個分數
+a = np.random.randint(50,101,size=(10,5))
+
+print('全部分數的加總',a.sum())
+
+print('全部分數的平均',a.mean())
+
+print('每個學生的總分數',a.sum(axis=1))
+
+b = a.mean(axis=1)
+print('每個學生的平均',a.mean(axis=1))
+
+print('全班最高平均',b.max())
+print('全班最低平均',b.min())
