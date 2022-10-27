@@ -83,3 +83,28 @@ print('每個學生的平均',a.mean(axis=1))
 
 print('全班最高平均',b.max())
 print('全班最低平均',b.min())
+
+******************************************
+import numpy as np
+import random as rd
+income = [235,134,537,468,346,578,245]
+weekarr = np.array(income)
+print(weekarr)
+
+a = np.array([0,1,2,3,4,5,6,7])
+sum = a.cumsum()  #累計總和
+print(sum)
+
+a = np.array([[0,1,2],[3,4,5],[6,7,8]])
+ax = a.cumsum(axis=0)
+print(ax)
+prod = a.cumprod(axis=1)
+print(prod) #累乘    # [[0 0 0][3 12 60][6 42 336]]
+
+#1家分店30天的營收
+one_store = np.random.randint(100,10000,size=(30))
+print(one_store)
+
+#累計每天這家店的營收
+one_store_cum = one_store.cumsum()
+print(one_store_cum)
