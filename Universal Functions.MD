@@ -1,15 +1,13 @@
-https://zh.m.wikipedia.org/zh-tw/%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0
-指數函數:
-現今指數函數通常特指以 e 為底數的指數函數 e^x , e^x為數學中重要的函數，也可寫作exp(x)。
-這裡的 e 是數學常數，也就是自然對數函數的底數，
-近似值為2.718281828}，又稱為歐拉數。
+參考文獻: https://zh.m.wikipedia.org/zh-tw/%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0     
+#### 指數函數:             
+        現今指數函數通常特指以 e 為底數的指數函數 e^x , e^x為數學中重要的函數，也可寫作exp(x)。
+        這裡的 e 是數學常數，也就是自然對數函數的底數，
+        近似值為2.718281828}，又稱為歐拉數。
 
 e^80 = 5.54062238
+![image](https://user-images.githubusercontent.com/112489587/201462098-effe6ee2-088c-4c16-8c75-29b7b3d720a6.png)
 
-a = np.arange(80,99)
-print(np.sqrt(a))
 
-print(np.exp(a))    # e^a
 
 *************************
 x = np.random.randn(8)
