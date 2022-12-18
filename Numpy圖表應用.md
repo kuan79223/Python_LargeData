@@ -80,7 +80,7 @@
 
 
 ************************************
-* 長條圖   
+* 長條圖       
 
     index = ['apple', 'banana', 'orange', 'tomato', 'guava']
     values = np.array([5, 7, 3, 4, 6]) * 1000
@@ -93,7 +93,8 @@
 
 
 ***********************************
-* 標註數值   
+* 標註數值      
+
     index = np.arange(5)
     values = np.array([5, 7, 3, 4, 6]) * 1000
     fig = plt.figure(figsize=(8,5))
@@ -104,3 +105,5 @@
     for i in index:
         plt.text(i-0.2,values[i]+200,values[i])
     plt.show()
+
+![image](https://user-images.githubusercontent.com/112489587/208304505-c4cbc073-7b83-4a66-b563-0572f0ab3fbb.png)
