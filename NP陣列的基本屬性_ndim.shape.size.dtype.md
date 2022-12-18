@@ -1,16 +1,18 @@
-ndarray.ndim - 維度的數量。
-ndarray.shape - 顯示出陣列在每個維度上的整數值。
-ndarray.size - 陣列內元素的總數。
-ndarray.dtype - 來描述陣列中元素類型的對象。
 
-import numpy as np
+* ndarray.ndim - 維度的數量。  
+* ndarray.shape - 顯示出陣列在每個維度上的整數值。      
+* ndarray.size - 陣列內元素的總數。    
+* ndarray.dtype - 來描述陣列中元素類型的對象。   
 
-# list與 ndarray差異
-l = [[1,2,3],
-     [2,3,4]]
-print(l)
-a = np.array(l)
-print(a)
+
+# list 與 ndarray 差異 
+
+
+     list1 = [[1,2,3],
+              [2,3,4]]
+
+     a = np.array(l)
+     print(a)
 
 print(a.ndim)  【ndim屬性查詢維度】(dimension)
 
