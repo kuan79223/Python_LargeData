@@ -1,18 +1,18 @@
-import numpy as np
-import matplotlib.pyplot as plt
-# numpy.linspace(start, stop, num=50, endpoint=True,
-                            #切割等分,  是否包括最後一個值
-               #retstep=False, dtype=None, axis=0)
-                #是否輸出間隔值 ,輸出的資料型態,軸向
+    import numpy as np
+    import matplotlib.pyplot as plt
+    # numpy.linspace(start, stop, num=50, endpoint=True,
+                                #切割等分,  是否包括最後一個值
+                   #retstep=False, dtype=None, axis=0)
+                    #是否輸出間隔值 ,輸出的資料型態,軸向
 
-n = 8
-y = np.zeros(n)
-x1 = np.linspace(0,10,n,endpoint=True)
-x2 = np.linspace(0,10,n,endpoint=False)
-plt.plot(x1,y,'*')
-plt.plot(x2,y+0.5,'*')
-plt.ylim([-0.5,1])
-plt.show()
+    n = 8
+    y = np.zeros(n)
+    x1 = np.linspace(0,10,n,endpoint=True)
+    x2 = np.linspace(0,10,n,endpoint=False)
+    plt.plot(x1,y,'*')
+    plt.plot(x2,y+0.5,'*')
+    plt.ylim([-0.5,1])
+    plt.show()
 
 *************************
 #numpy數值計算
