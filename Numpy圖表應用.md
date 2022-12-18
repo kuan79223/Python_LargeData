@@ -82,12 +82,12 @@
 ************************************
 * 長條圖       
 
-    index = ['apple', 'banana', 'orange', 'tomato', 'guava']
-    values = np.array([5, 7, 3, 4, 6]) * 1000
-    fig = plt.figure(figsize=(8,5))
-    ax1 = fig.add_subplot(1,1,1)
-    ax1.bar(index,values)
-    plt.show()
+        index = ['apple', 'banana', 'orange', 'tomato', 'guava']
+        values = np.array([5, 7, 3, 4, 6]) * 1000
+        fig = plt.figure(figsize=(8,5))
+        ax1 = fig.add_subplot(1,1,1)
+        ax1.bar(index,values)
+        plt.show()
 
 ![image](https://user-images.githubusercontent.com/112489587/208304422-4ca79108-e633-4757-b207-137296cfa393.png)
 
@@ -95,15 +95,15 @@
 ***********************************
 * 標註數值      
 
-    index = np.arange(5)
-    values = np.array([5, 7, 3, 4, 6]) * 1000
-    fig = plt.figure(figsize=(8,5))
-    ax1 = fig.add_subplot(1,1,1)
-    ax1.bar(index,values)
-    plt.xticks(index,['apple', 'banana', 'orange', 'tomato', 'guava'])
-    plt.axis([-1,5,0,8000])
-    for i in index:
-        plt.text(i-0.2,values[i]+200,values[i])
-    plt.show()
+        index = np.arange(5)
+        values = np.array([5, 7, 3, 4, 6]) * 1000
+        fig = plt.figure(figsize=(8,5))
+        ax1 = fig.add_subplot(1,1,1)
+        ax1.bar(index,values)
+        plt.xticks(index,['apple', 'banana', 'orange', 'tomato', 'guava'])
+        plt.axis([-1,5,0,8000])
+        for i in index:
+            plt.text(i-0.2,values[i]+200,values[i])
+        plt.show()
 
 ![image](https://user-images.githubusercontent.com/112489587/208304505-c4cbc073-7b83-4a66-b563-0572f0ab3fbb.png)
