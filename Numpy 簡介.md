@@ -1,5 +1,7 @@
 # Numpy 簡介  
 
+參考文獻 https://ithelp.ithome.com.tw/articles/10233646
+
 1.  可做到的功能
   * 快速的多維陣列操作。
   * 可靠的科學功能函數庫。
