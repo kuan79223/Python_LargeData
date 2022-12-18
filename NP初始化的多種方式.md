@@ -1,49 +1,80 @@
-1.針對初始化這部分提供了多種方式:
-              不做初始化 - 例如:np.empty((2,4))
-              全部規劃為 0 - 例如:np.zeros((3,4))
-              全部規劃為 1 - 例如: np.ones((5,2))
-              全部規劃/填滿為某數，例如 6 - 例如: np.full((3,3),6)
-              建立對角矩陣，對角皆為 1，其他為 0 - 例如: np.eye(3)
-              建立對角矩陣，對角為 1,2,3,4，其他為 0 - 例如: np.diag([1,2,3,4])
-    2.reshape((x,y)) 這個指令就可以將現有的陣列重新規劃為 x 乘以 y 的陣列。
-    3.np.arange(起始值, 結束值, 固定間隔):也是產生一維陣列，
-    和 np.array( ) 的差別在於 arange 擁有較大的彈性，而且元素數值是自動化產生。
+# NP初始化的多種方式  
 
-    4.np.linspace(起始值, 結束值, 起始與結束的區間內要產生幾個元素 ): 
+1.針對初始化這部分提供了多種方式:    
+              
+* 不做初始化 - 例如:np.empty((2, 4))
+![image](https://user-images.githubusercontent.com/112489587/208289905-cd3f2755-77ca-4d32-bd46-28baffb4b64f.png)
+
+
+* 全部規劃為 0 - 例如:np.zeros((3, 4))
+![image](https://user-images.githubusercontent.com/112489587/208289970-0f68aca9-50bd-451a-9ed7-c2ea8c82a66c.png)
+
+
+* 全部規劃為 1 - 例如: np.ones((5, 2))
+![image](https://user-images.githubusercontent.com/112489587/208289984-9ea9cd4d-a204-4125-8ac7-ddb9d5b55028.png)
+
+* 全部規劃/填滿為某數，例如 6 - 例如: np.full((3, 3), 6)
+![image](https://user-images.githubusercontent.com/112489587/208290001-51cb267d-34f1-415e-ac4f-84461b4c9a85.png)
+
+
+* 建立對角矩陣，對角皆為 1，其他為 0 - 例如: np.eye(3)
+![image](https://user-images.githubusercontent.com/112489587/208290010-a6475098-395a-409d-97b9-da43636a5375.png)
+
+
+* 建立對角矩陣，對角為 1,2,3,4，其他為 0 - 例如: np.diag([1, 2, 3, 4])
+![image](https://user-images.githubusercontent.com/112489587/208290027-5e1be61d-131f-4c07-b8e9-865a6cb19e0c.png)
+       
+              
+              
+2.reshape((x,y)) 這個指令就可以將現有的陣列重新規劃為 x 乘以 y 的陣列。   
+  
+3.np.arange(起始值, 結束值, 固定間隔):也是產生一維陣列，     
+  和 np.array( ) 的差別在於 【arange 擁有較大的彈性，而且元素數值是自動化產生。】        
+
+4.np.linspace(起始值, 結束值, 起始與結束的區間內要產生幾個元素 ):   
                   只要給定陣列的區間(起始值、結束值)，就可以要求在這個區間內產生幾個元素。
     
     
     arange(a,b,c) - 不包含 b 由 a 開始 以固定間隔 c 來取值
-    linspace(a,b,c) - 包含 b 由 a 開始 切割成 c 個資料
-    linspace(a,b,c,endpoint=False) - 不包含 b 由 a 開始 切割成 c 
+    ex: np.arange(0,10,5)
+![image](https://user-images.githubusercontent.com/112489587/208290357-574579cc-50d1-40ad-af72-e07f7bcecfdc.png)
     
+    linspace(a,b,c) - 包含 b 由 a 開始 切割成 c 個資料
+    ex: np.linspace(0,10,5)
+![image](https://user-images.githubusercontent.com/112489587/208290263-96727b05-53d9-465a-926b-a9dd7aedec20.png)
+
+    linspace(a,b,c,endpoint=False) - 不包含 b 由 a 開始 切割成 c ,預設值為 True 與上例一樣
+    ex: np.linspace(0,10,5,endpoint=False)
+![image](https://user-images.githubusercontent.com/112489587/208290212-62d6fed6-fd04-4137-b02a-9d573e67a70e.png)
 
 
-***********基本索引和分割**************
-import numpy as np
 
-a = np.arange(10)
-print(a[5])     #直接座標
-print(a[:5])    # [0 1 2 3 4]
-print(a[5:8])   # [5 6 7]
-a[5:8]=12       # 指定 a 陣列範圍的值為: 12
-print(a)        # [ 0  1  2  3  4  12  12  12  8  9]
+## 基本索引和分割  
 
 
-arr_slice = a[5:8]  #宣告變數 複製 a 陣列片段
+    a = np.arange(10)
+    print(a[5])     #直接座標 5
+    print(a[:5])    # [0 1 2 3 4]
+    print(a[5:8])   # [5 6 7]
+    a[5:8]=12       # 指定 a 陣列範圍內的值為: 12
+    print(a)        # [ 0  1  2  3  4  12  12  12  8  9]
+
+
+* arr_slice = a[5:8]  #宣告變數 複製 a 陣列片段 
 #此時arr_slice為新的陣列 ,陣列值為 [12,12,12]
-print(arr_slice)
+  
+* arr_slice[1] = 12345    
+#index 0,1,2 將arr_slice的index 1設為 12345
+![image](https://user-images.githubusercontent.com/112489587/208290784-1e13b9c2-b4fc-4e86-9e16-5afb81bc56fe.png)
 
 
-arr_slice[1] = 12345   #index 0,1,2 將arr_slice的index 1設為 12345
-print(arr_slice)
+* arr_slice[:] = 64     
+#將arr_slice全部的設為 64
 
-arr_slice[:] = 64   #將arr_slice全部的設為64
-print(arr_slice)
 
-#明確指定複製陣列
+* 明確指定複製陣列   
 copy_arr = a[1:4].copy()
-print(copy_arr)
+
 
 
 
