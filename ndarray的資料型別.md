@@ -34,20 +34,20 @@
 ![image](https://user-images.githubusercontent.com/112489587/208301915-b1b2a7e7-99eb-4dca-a302-2a9e72dfadbd.png)
 
 
-#如果將浮點數轉換為整數,則小數將被刪除
-b = np.array([3.7, -1.2, -2.6, 0.5, 12.9, 10.1])
-print(b.dtype)
+* 如果將浮點數轉換為整數,則小數將被刪除
+        b = np.array([3.7, -1.2, -2.6, 0.5, 12.9, 10.1])
+        print(b.dtype)
 
-int_b = b.astype(np.int32)
-print(int_b)
+        int_b = b.astype(np.int32)
+        print(int_b)
 
 ![image](https://user-images.githubusercontent.com/112489587/208301993-b28133ab-d952-4ade-8219-14be1c30328f.png)
 
-#string轉為number
+* string轉為number
 
-s = np.array(['1.23','-9.5','43'])
-print(s)
-print(s.astype(np.float))
+        s = np.array(['1.23','-9.5','43'])      
+        print(s)
+        print(s.astype(np.float))
 
 
 ![image](https://user-images.githubusercontent.com/112489587/208302226-b22185b0-c0ba-43b6-85cd-e826a3fdfaaf.png)
