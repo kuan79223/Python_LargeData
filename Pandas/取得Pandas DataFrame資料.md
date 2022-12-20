@@ -1,3 +1,5 @@
+參考文獻: https://www.learncodewithmike.com/2020/11/python-pandas-dataframe-tutorial.html    
+    
     dict_data = {
         'name':['Kobe','Wade','JACK'],
         'english':[67,87,77],
@@ -32,6 +34,9 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208562989-c1
     
 out >> ![image](https://user-images.githubusercontent.com/112489587/208563305-2f32cc88-21a3-4780-a28c-83d3acf4091f.png)
 
+
+
+
 ### 取得單一欄位資料(型別為DataFrame)    
     
       df[['stu_name']]
@@ -44,7 +49,7 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208563368-ba
       
 out >> ![image](https://user-images.githubusercontent.com/112489587/208563888-26559301-4d5c-4142-8cea-baa6f8727c0f.png)
 
-### 使用索引分割取得資料        
+### 使用索引分割取得資料  在中括號中指定「欄位名稱」或「資料索引值」，來取得所需的資料集      
 
 
       df[1: 2]
@@ -76,4 +81,23 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208563888-26
         df.at[1,'math]
 
 out >> 87
+
+### iat[資料索引值,欄位順序]：利用資料索引值及欄位順序來取得「單一值」        
+
+        df.iat[1, 0]
+              [row,column]
+out >> Wade
+
+### loc[資料索引值,欄位名稱]：利用資料索引值及欄位名稱來取得「資料集」
+
+        df.loc[1, 'name']
+out >> Wade
+
+### iloc[資料索引值,欄位順序]：利用資料索引值及欄位順序來取得「資料集」
+
+        取得資料索引值為0和1的第0個及第1個欄位資料集
+        
+        df.iloc[[0, 1], [0, 1]]
+        
+out >> ![image](https://user-images.githubusercontent.com/112489587/208655868-d12011a8-b7ef-4900-9a7d-2cd62fcc62d9.png)
 
