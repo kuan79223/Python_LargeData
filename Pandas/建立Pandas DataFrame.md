@@ -1,0 +1,48 @@
+## 使用 dict 創建 DataFrame      
+#### 鍵值(Key)就是Pandas DataFrame的欄位名稱，值(Value)則是該欄位的資料內容。     
+    dict_data = {
+        'name':['Kobe','Wade','JACK'],
+        'english':[67,87,77],
+        'chinese':[86,94,82]
+    }
+
+    df = pd.DataFrame(dict_data)
+    
+![image](https://user-images.githubusercontent.com/112489587/208558988-efc5a44c-b142-45dd-bf97-0e3216cc1f95.png)
+
+
+## 使用 list 創建DataFrame    
+#### 而使用陣列來指定的話，就是單純的每一筆資料內容。   
+
+
+
+    list_data = [
+      ['Kobe',65,78,88],
+      ['Wade',66,89,82],
+      ['Jack',78,99,65]
+    ]
+
+    df = pd.DataFrame(list_data)
+    
+ ![image](https://user-images.githubusercontent.com/112489587/208559185-0d1e55b5-481b-4514-9b7a-bee05e6c3647.png)
+
+
+## 客製化 DataFrame    
+#### Use separately 【index】 and 【columns】 the Attribute Finish
+
+    dict_data = {
+        'name':['Kobe','Wade','JACK'],
+        'english':[67,87,77],
+        'chinese':[86,94,82]
+    }
+
+    df = pd.DataFrame(dict_data)
+    # Row
+    df.index = ['s1','s2','s3']
+
+    # column 
+
+    df.columns = ['stu_name','eng_score','chin_score']
+    
+ ![image](https://user-images.githubusercontent.com/112489587/208561989-2a7df181-e63f-4532-b50d-02862b163156.png)
+
