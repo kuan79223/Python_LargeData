@@ -18,3 +18,11 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208657506-0e
 out >> ![image](https://user-images.githubusercontent.com/112489587/208658923-a9edff67-5511-48bb-991e-b5d6b51d507c.png)
     
 
+### append()：新增一筆或一列的資料，透過傳入字典(Dictionary)來指定各欄位的值，
+### 並且會回傳一個新的Pandas DataFrame資料集       
+
+    new_df = df.append({'name':'Kobe','math':80,'chinese':90},ignore_index=True)
+    
+out >> ![image](https://user-images.githubusercontent.com/112489587/208674312-71d19824-f9fd-4d91-bef0-fddb00917b80.png)
+
+    
