@@ -32,19 +32,19 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208562989-c1
     
 out >> ![image](https://user-images.githubusercontent.com/112489587/208563305-2f32cc88-21a3-4780-a28c-83d3acf4091f.png)
 
-* 取得單一欄位資料(型別為DataFrame)    
+### 取得單一欄位資料(型別為DataFrame)    
     
       df[['stu_name']]
     
 out >> ![image](https://user-images.githubusercontent.com/112489587/208563368-bac970f8-f1e4-4403-999f-57b3a7dbafcb.png)
 
-* 取得多欄位資料(型別為DataFrame)     
+### 取得多欄位資料(型別為DataFrame)     
 
       df[['stu_name','eng_score']]
       
 out >> ![image](https://user-images.githubusercontent.com/112489587/208563888-26559301-4d5c-4142-8cea-baa6f8727c0f.png)
 
-* 使用索引分割取得資料        
+### 使用索引分割取得資料        
 
 
       df[1: 2]
@@ -60,7 +60,7 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208563888-26
 ![image](https://user-images.githubusercontent.com/112489587/208565694-ebab16b9-6600-4f32-a5b7-cbd0f2ba956d.png)
       
       
-## at[資料索引值,欄位名稱]：利用資料索引值及欄位名稱來取得「單一值」       
+### at[資料索引值,欄位名稱]：利用資料索引值及欄位名稱來取得「單一值」       
       dict_data = {
     'name':['Kobe','Wade','JACK'],
     'math':[67,87,77],
@@ -71,8 +71,9 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208563888-26
     
 ![image](https://user-images.githubusercontent.com/112489587/208567406-dc36ca36-8fe4-4a34-bb09-b5b9ddd552bc.png)
 
-* 取得 math index 1 的成績
-    df.at[1,'math]
+* 取得 math index 1 的成績       
+    
+        df.at[1,'math]
 
 out >> 87
 
