@@ -25,4 +25,35 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208658923-a9
     
 out >> ![image](https://user-images.githubusercontent.com/112489587/208674312-71d19824-f9fd-4d91-bef0-fddb00917b80.png)
 
+
+### concat 
+    # 字典1
     
+    data1 = {
+        "name": ["Mike", "Sherry", "Cindy", "John"],
+        "math": [80, 75, 93, 86],
+        "chinese": [63, 90, 85, 70]
+    }
+
+    df1 = pd.DataFrame(data1)
+
+
+out >>![image](https://user-images.githubusercontent.com/112489587/208795779-95e0002c-8893-480c-ac31-658060c22c4e.png)
+
+
+    # 建立一個新字典
+    
+    data2 = {
+        'name': ['Kobe','Wade'],
+        'math': [0, 100],
+        'chinese': [0,100]
+    }
+    
+    df2 = pd.DataFrame(data2)
+
+
+    # 合併兩個字典的 DataFrame
+    new_df = pd.concat([df1,df2],igonre_index=True)
+
+out >> ![image](https://user-images.githubusercontent.com/112489587/208795819-34f58adc-4f82-4de5-8a5c-afafa4d0fa79.png)
+
