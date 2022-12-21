@@ -1,0 +1,30 @@
+# 利用Pandas DataFrame的 at[] 及 iat[] 取得所要修改的單一值後，來進行資料內容的修改
+
+![image](https://user-images.githubusercontent.com/112489587/208798412-75a0a0f9-6bdf-4c97-a184-ddc8fffda47d.png)
+
+
+***************
+
+## drop(欄位名稱串列,axis=1)：刪除指定欄位名稱的欄位，並且會回傳一個新的Pandas DataFrame資料集
+
+![image](https://user-images.githubusercontent.com/112489587/208799950-5094b850-7962-47b6-a956-6ead2b3fd524.png)
+
+## drop(資料索引串列,axis=0):刪除指定資料索引的資料，並且會回傳一個新的Pandas DataFrame資料集
+* 也可以指定一個 int 索引位置 
+
+![image](https://user-images.githubusercontent.com/112489587/208800441-663851a9-77b5-47db-b8d5-d8051b005cb5.png) ![image](https://user-images.githubusercontent.com/112489587/208800605-e9e1753b-2781-4fbe-a183-3a4fbc74e5d2.png)
+
+
+
+# dropna():刪除含有NaN或空值的資料，並且會回傳一個新的Pandas DataFrame資料集，在進行資料清理的時候非常實用
+
+![image](https://user-images.githubusercontent.com/112489587/208802183-e31378c5-9724-4b0e-91db-b62daa47152e.png)
+
+
+
+# drop_duplicates()：刪除重複的資料，並且會回傳一個新的Pandas DataFrame資料集，同樣最常應用在資料清理的時候
+
+* 索引資料欄位需要一致    
+![image](https://user-images.githubusercontent.com/112489587/208803439-40df6540-7c03-4ce3-86ec-4edbc996b52c.png)
+
+
