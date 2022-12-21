@@ -18,15 +18,20 @@ out >> ![image](https://user-images.githubusercontent.com/112489587/208657506-0e
 out >> ![image](https://user-images.githubusercontent.com/112489587/208658923-a9edff67-5511-48bb-991e-b5d6b51d507c.png)
     
 
-### append()：新增一筆或一列的資料，透過傳入字典(Dictionary)來指定各欄位的值，
-### 並且會回傳一個新的Pandas DataFrame資料集       
+### append()：新增一筆或一列的資料，透過傳入字典(Dictionary)來指定各欄位的值，並且會回傳一個新的Pandas DataFrame資料集       
 
     new_df = df.append({'name':'Kobe','math':80,'chinese':90},ignore_index=True)
     
 out >> ![image](https://user-images.githubusercontent.com/112489587/208674312-71d19824-f9fd-4d91-bef0-fddb00917b80.png)
 
 
-### concat 
+* append 新增字典中有多個元素, 會以陣列的方式顯示在 DataFrame
+
+![image](https://user-images.githubusercontent.com/112489587/208797182-fbb828d0-3618-4e1f-9d29-2a8c3fd3d48e.png)
+
+
+
+### concat 利用合併多個Pandas DataFrame的方式來新增資料，並且會回傳一個新的Pandas DataFrame資料集
     # 字典1
     
     data1 = {
@@ -53,7 +58,8 @@ out >>![image](https://user-images.githubusercontent.com/112489587/208795779-95e
 
 
     # 合併兩個字典的 DataFrame
+    
     new_df = pd.concat([df1,df2],igonre_index=True)
 
-out >> ![image](https://user-images.githubusercontent.com/112489587/208795819-34f58adc-4f82-4de5-8a5c-afafa4d0fa79.png)
+out >> ![image](https://user-images.githubusercontent.com/112489587/208796048-d669f346-2ae5-4dd8-855f-a0289f3799e3.png)
 
