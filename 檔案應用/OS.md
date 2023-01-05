@@ -23,6 +23,8 @@
     basename2 = os.path.splitext(os.path.basename(filename))[0]
     
     
+out >> main
+    
 #### 回傳目前檔案目錄路徑    
    
     os.getcwd()
