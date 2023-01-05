@@ -1,31 +1,81 @@
     import os
-#### getcwd 取得目前的工作目錄
+
+#### 傳回檔案完整的路徑名稱
+    
+    filename = os.path.abspath('main.py')
+    
+![image](https://user-images.githubusercontent.com/112489587/210712918-f944617d-609b-4c18-80cd-2e49039066be.png)
+
+#### 檢查指定的檔案或路徑是否存在
+    
+    if os.path.exists(filename):
+#### 最後的檔案或路徑名稱
+    
+    basename = os.path.basename(filename)
+
+![image](https://user-images.githubusercontent.com/112489587/210713055-aaecd191-8a68-4ba1-a40b-e8a15c138de5.png)
+
+    
+#### 利用 os.path.basename(完整路徑).split('.')[0] ,或者 os.path.splittext 切除附檔名
+
+    basename1 = os.path.basename(filename).split('.')[0]
+    
+    basename2 = os.path.splitext(os.path.basename(filename))[0]
+    
+    
+#### 回傳目前檔案目錄路徑    
+   
     os.getcwd()
+    
+    os.path.dirname(filename)
 
-#### python 檔案路徑
-    print(os.getcwd())
-* 絕對路徑
-    dir = '/home/runner/ospathbasename/content.txt'
 
-#### 取出路徑中的檔案名稱
-    print(os.path.basename(dir))
+* 兩個語法得到了相同的路徑  
+    ![image](https://user-images.githubusercontent.com/112489587/210713312-ff62edc6-558d-496f-9375-9ba1ebdd1c73.png)
 
-out >> content.txt
+    
+    
+* 利用 split 切割檔案目錄   
 
-### '''將副檔名去除,留下檔案名稱'''
+      directory, name = os.path.split(filename)
+      
+    目錄路徑: directory =>
+      
+    ![image](https://user-images.githubusercontent.com/112489587/210713522-437953d7-dd9a-4d36-bf36-506f86d94c21.png)
+    
+    檔名: name => 
+    ![image](https://user-images.githubusercontent.com/112489587/210713578-f801254d-0bfe-4fb5-a6fe-588f35f7396f.png)
 
-    basename1 = os.path.basename(dir).split('.')[0]
-    print(basename1)
+    
+* 利用 join 組合檔案目錄名稱      
 
-    basename2 = os.path.splitext(os.path.basename(dir))[0]
-    print(basename2)
+       Path = os.path.join(directory, name)
+    
+    組合路徑: Path =>   
+    ![image](https://user-images.githubusercontent.com/112489587/210713717-351895f4-fc1c-46a9-8d9a-38733f327a0f.png)
 
-out >> content
 
+        # join函式,可以將參數內的字串結合成一個檔案的路徑,參數可以2個或2個以上
+        # Drive,fpath=os.path.splitdirve(filename)
+        # print('磁碟機:'+Drive)
+        # print('路徑名稱:'+fpath)
+#### 檔案大小
+         
+        os.path.getsize(filename)
+        
+![image](https://user-images.githubusercontent.com/112489587/210713961-b32981ea-157f-48f2-a27e-f2492755a6ab.png)
+
+    
+#### 判別檔案是否為目錄 回傳 bool
+    
+    isdir = os.path.isdir(filename)
+    
+![image](https://user-images.githubusercontent.com/112489587/210714080-5ab80c51-0e90-480f-ae22-899d4b1e8bff.png)
+    
 
 #### remove 刪除指定的檔案,配合語法 os.path.exists
 
-    file = 'myFile.txt'
+    file = '/home/runner/ospathMo-ZumyFile.txt'
     if os.path.exists(file):
       os.remove(file)
     else:
@@ -33,7 +83,7 @@ out >> content
 
 #### mkdir 建立指定的目錄
 
-    dir = 'myDir'  
+    dir = '/home/runner/ospathMo-Zu'  
     * 檢查目錄是否存在
     if not os.path.exists(dir):
       os.mkdir(dir)
@@ -43,7 +93,7 @@ out >> content
 
 #### rmdir 刪除指定的檔案,必須先刪除該目錄的檔案
 
-    dir = 'myDir' 
+    dir = '/home/runner/ospathMo-Zu' 
     * 檢查目錄是否存在
     if not os.path.exists(dir):
       os.rmkdir(dir)  
